@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="footer-online text-start">
-              <h6 className="text mb-3">สื่อสังคมออนไลน์</h6>
+              <h6 className="text mb-3 text-white">สื่อสังคมออนไลน์</h6>
 
               <div className="social-buttons d-flex align-items-center flex-wrap">
                 <Icon iconName="Facebook" />

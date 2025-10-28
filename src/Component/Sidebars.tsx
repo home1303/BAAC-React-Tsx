@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "./Sidebar.scss";
 
-const Sidebar: React.FC = () => {
-  const [open, setOpen] = useState(false);
+interface SidebarProps {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
   const [submenuOpen, setSubmenuOpen] = useState(false);
 
   return (
