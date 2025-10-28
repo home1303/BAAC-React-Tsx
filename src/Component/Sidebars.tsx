@@ -18,7 +18,7 @@ const Sidebar: React.FC = () => {
           </button>
 
           <img
-            src="/imges/baac-header-hover 1.png"
+            src="/icons/imges/baac-header-hover 1.png"
             alt="BAAC Logo"
             style={{
               height: "30px",
