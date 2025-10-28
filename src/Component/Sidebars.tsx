@@ -7,7 +7,16 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [submenuOpen, setSubmenuOpen] = useState(false);
+
+  const handleClick = (index: number) => {
+    if (activeIndex === index) {
+      setActiveIndex(null); // ถ้ากดซ้ำ ลบสี
+    } else {
+      setActiveIndex(index);
+    }
+  };
 
   return (
     <>
@@ -35,10 +44,14 @@ const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
       {/* Sidebar */}
       <div className={`sidebar ${open ? "sidebar-open" : ""}`}>
         <ul className="list-unstyled m-0">
+          {/* จัดการมาสเตอร์ */}
           <li className="sidebar-item">
             <div
-              className="sidebar-link"
-              onClick={() => setSubmenuOpen(!submenuOpen)}
+              className={`sidebar-link ${activeIndex === 0 ? "active" : ""}`}
+              onClick={() => {
+                handleClick(0);
+                setSubmenuOpen(!submenuOpen);
+              }}
             >
               <img src="/icons/Vector12.svg" className="sidebar-icon" />
               จัดการมาสเตอร์
@@ -64,47 +77,27 @@ const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
             )}
           </li>
 
-          <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
-              <img src="/icons/Vector1.svg" className="sidebar-icon" />
-              สัญญาหลักประกัน
-            </a>
-          </li>
-
-          <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
-              <img src="/icons/18.svg" className="sidebar-icon" />
-              ตรวจสอบสัญญาหลักประกัน
-            </a>
-          </li>
-
-          <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
-              <img src="/icons/20.svg" className="sidebar-icon" />
-              มอบหมายงาน
-            </a>
-          </li>
-
-          <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
-              <img src="/icons/Vector1.svg" className="sidebar-icon" />
-              ค้นหาสัญญาหลักประกัน
-            </a>
-          </li>
-
-          <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
-              <img src="/icons/1.svg" className="sidebar-icon" />
-              รายงานแดชบอร์ด
-            </a>
-          </li>
-
-          <li className="sidebar-item">
-            <a href="#" className="sidebar-link">
-              <img src="/icons/19.svg" className="sidebar-icon" />
-              ประวัติการใช้งาน
-            </a>
-          </li>
+          {/* Item อื่น ๆ */}
+          {[
+            { icon: "/icons/Vector1.svg", label: "สัญญาหลักประกัน" },
+            { icon: "/icons/18.svg", label: "ตรวจสอบสัญญาหลักประกัน" },
+            { icon: "/icons/20.svg", label: "มอบหมายงาน" },
+            { icon: "/icons/Vector1.svg", label: "ค้นหาสัญญาหลักประกัน" },
+            { icon: "/icons/1.svg", label: "รายงานแดชบอร์ด" },
+            { icon: "/icons/19.svg", label: "ประวัติการใช้งาน" },
+          ].map((item, index) => (
+            <li className="sidebar-item" key={index + 1}>
+              <div
+                className={`sidebar-link ${
+                  activeIndex === index + 1 ? "active" : ""
+                }`}
+                onClick={() => handleClick(index + 1)}
+              >
+                <img src={item.icon} className="sidebar-icon" />
+                {item.label}
+              </div>
+            </li>
+          ))}
         </ul>
       </div>
     </>
