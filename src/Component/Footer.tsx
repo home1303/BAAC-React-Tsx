@@ -1,55 +1,89 @@
 import React from "react";
+import Button from "./iconsbutton"
+import "./Footer.scss";
 
-const Footer:React.FC = () => {
-return (
+const Footer: React.FC = () => {
+  return (
     <>
-    <footer className="text-center text-lg-start bg-light text-muted">
-  <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <div className="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
-    </div>
-    <div>
-      <a href="#" className="me-4 text-reset">Facebook</a>
-      <a href="#" className="me-4 text-reset">Twitter</a>
-      <a href="#" className="me-4 text-reset">Instagram</a>
-    </div>
-  </section>
+      <footer
+        className="text-white pt-4"
+        style={{ backgroundColor: "#047857", width: "100%", height: "250px" }}
+      >
+        <div
+          className="container-fluid px-5"
+          style={{ maxWidth: "1400px", margin: "0 auto" }}
+        >
+          <div className="d-flex flex-wrap justify-content-between align-items-start footer-flex">
+            {/* โลโก้ */}
+            <div className="text-center me-4">
+              <img
+                src="/imges/BAAC_Logo.svg 1.png"
+                alt="BAAC Logo"
+                style={{ width: "80px", height: "auto" }}
+              />
+            </div>
 
-  <section className="">
-    <div className="container text-center text-md-start mt-5">
-      <div className="row mt-3">
-        <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <h6 className="text-uppercase fw-bold mb-4">Company name</h6>
-          <p>Here you can use rows and columns to organize your footer content.</p>
+       
+            <div
+              className="footer-contact"
+              style={{ flex: 1, minWidth: "600px" }}
+            >
+              <h6 className="fw-bold mb-2">ช่องทางการติดต่อ</h6>
+
+              <div className="row">
+                <div className="col-md-6">
+                  <p className="mb-1">
+                    ธนาคารเพื่อการเกษตรและสหกรณ์การเกษตร (ธ.ก.ส.)
+                  </p>
+                  <p className="mb-1">
+                    ที่อยู่ : เลขที่ 2346 ถนนพหลโยธิน แขวงเสนานิคม เขตจตุจักร
+                    กรุงเทพฯ 10900
+                  </p>
+                </div>
+
+                <div className="col-md-6">
+                  <p className="mb-1">โทรศัพท์ : 0-2555-0555</p>
+                  <p className="mb-1">โทรสาร : 0-2558-6341</p>
+                  <p className="mb-0">E-mail : contact@baac.or.th</p>
+                </div>
+              </div>
+            </div>
+
+           
+            <div
+              className="footer-online text-start"
+              style={{ flex: 1, minWidth: "400px" }}
+            >
+              <h6
+                className="fw-bold mb-3"
+                style={{ fontSize: "1rem", lineHeight: "1.2" }}
+              >
+                สื่อสังคมออนไลน์
+              </h6>
+
+              <div
+                className="social-buttons d-flex align-items-center flex-wrap"
+                style={{ gap: "12px" }}
+              >
+                <Button iconName="facebook" onClick={() => console.log("Facebook")} />
+                <Button iconName="line" onClick={() => console.log("Line")} />
+                <Button iconName="youtube" onClick={() => console.log("YouTube")} />
+                <Button iconName="tiktok" onClick={() => console.log("TikTok")} />
+                <Button iconName="instagram" onClick={() => console.log("Instagram")} />
+                <Button iconName="rss1" onClick={() => console.log("RSS")} />
+              </div>
+            </div>
+          </div>
+
+          <hr className="border-light my-3" />
+
+          <div className="text-center pb-3">
+            <small>© All Rights Reserved. BAAC Version 1.0.0</small>
+          </div>
         </div>
-
-        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 className="text-uppercase fw-bold mb-4">Products</h6>
-          <p><a href="#!" className="text-reset">Product 1</a></p>
-          <p><a href="#!" className="text-reset">Product 2</a></p>
-        </div>
-
-        <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
-          <p><a href="#!" className="text-reset">Link 1</a></p>
-          <p><a href="#!" className="text-reset">Link 2</a></p>
-        </div>
-
-        <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i className="fas fa-home me-3"></i> Address</p>
-          <p><i className="fas fa-envelope me-3"></i> email@example.com</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div className="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2025 Company, Inc.
-  </div>
-</footer>
-
+      </footer>
     </>
-)
-}
+  );
+};
+
 export default Footer;
