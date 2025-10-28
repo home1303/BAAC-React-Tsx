@@ -11,9 +11,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-transform: none;
   letter-spacing: 0.5px;
-  box-sizing: border-box; /* ✅ ทำให้ border ไม่ขยายขนาด */
-  min-width: 150px;       /* ✅ เพิ่มความเท่ากันแนวนอน */
-  display: inline-flex;   /* ✅ จัดข้อความให้อยู่กลาง */
+  box-sizing: border-box; 
+  min-width: 150px;      
+  display: inline-flex;   
   align-items: center;
   justify-content: center;
 }
