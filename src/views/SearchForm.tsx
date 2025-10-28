@@ -2,13 +2,15 @@ import React from "react";
 import "../Component/SearchForm.scss";
 import "../css/first-page.css";
 import Button from "../Component/Button";
+import CardItem from "../Component/CardItem";
+import PieChart from "../Component/PieChart";
 
 const SearchForm: React.FC = () => {
   return (
     <div className="container-header">
       <h2 className="text">รายงานแดชบอร์ด</h2>
       <div
-        className="card shadow-sm border-0"
+        className="card shadow-sm border-1"
         style={{
           padding: "30px 24px",
           borderRadius: "8px",
@@ -146,6 +148,56 @@ const SearchForm: React.FC = () => {
             <Button text="ค้นหา" color="dark-green" textColor="white" />
           </div>
         </div>
+      </div>
+
+      <div className="mt-5 ms-5">
+        <div className="cardItem">
+          <CardItem
+            title="จำนวนรายการทั้งหมด"
+            value="10,000"
+            color="blue"
+            icon="/icons/Group 121.svg"
+          />
+          <CardItem
+            title="จำนวนรายการที่ผ่านการอนุมัติ"
+            value="6,500"
+            color="purple"
+            icon="/icons/Group 122.svg"
+          />
+          <CardItem
+            title="จำนวนรายการที่รอตรวจสอบ"
+            value="3,000"
+            color="green"
+            icon="/icons/Group 123.svg"
+          />
+          <CardItem
+            title="จำนวนรายการที่ไม่ผ่านการอนุมัติ"
+            value="1,000"
+            color="red"
+            icon="/icons/Group 124.svg"
+          />
+
+          <CardItem
+            title="จำนวนรายการที่ไม่ผ่านการอนุมัติ"
+            value="1,000"
+            color="gray"
+            icon="/icons/Group 125.svg"
+          />
+          <CardItem
+            title="จำนวนรายการที่ไม่ผ่านการอนุมัติ"
+            value="1,000"
+            color="yellow"
+            icon="/icons/Group 126.svg"
+          />
+        </div>
+      </div>
+
+      <div className="pie-chart">
+        <PieChart
+          labels={["ผ่านการอนุมัติ", "ไม่ผ่านอนุมัติ", "ยกเลิก", "อผลตรวจสอบ", "ปิดงาน"]}
+          data={[60, 10, 5, 20, 5]}
+          colors={["#73c388", "#da717f ", "#c1c5d0", "#7f8ada", "#f6e190"]}
+        />
       </div>
     </div>
   );

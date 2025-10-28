@@ -13,3 +13,15 @@ select.form-select {
   border-radius: 6px;
 }
 
+.cardItem {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+
+.pie-chart{
+  height: 500px;
+  width: 500px;
+  margin: 40px auto;
+}
