@@ -9,7 +9,7 @@ const Sidebar: React.FC = () => {
     <>
       {/* Navbar */}
       <nav className="navbar navbar-light bg-light shadow-sm px-3">
-        <div className="d-flex align-items-center">
+        <div className="navbar-content d-flex align-items-center">
           <button
             className="navbar-toggler border-0 me-2"
             type="button"
@@ -17,11 +17,7 @@ const Sidebar: React.FC = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <img
-            src="/imges/baac-header-hover 1.png"
-            alt="BAAC Logo"
-            style={{ height: "30px", width: "auto" }}
-          />
+          <img src="/imges/baac-header-hover 1.png" alt="BAAC Logo" />
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
           <img
@@ -107,7 +103,6 @@ const Sidebar: React.FC = () => {
           </li>
         </ul>
       </div>
-
     </>
   );
 };

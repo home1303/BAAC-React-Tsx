@@ -1,6 +1,6 @@
 import React from "react";
 
-type ButtonProps = {
+type IconProps = {
   iconName?: string;
   onClick?: () => void;
   children?: React.ReactNode;
@@ -9,29 +9,13 @@ type ButtonProps = {
 
 const getIconPath = (name: string) => `/icons/${name}.svg`;
 
-const Button: React.FC<ButtonProps> =  ({
-  iconName,
-  onClick,
-  children,
-  iconSize = 28,
-}) => {
+const Icon: React.FC<IconProps> = ({ iconName, onClick, children }) => {
   return (
-    <button type="button" className="btn-icon" onClick={onClick}>
-      {iconName && (
-        <img
-          src={getIconPath(iconName)}
-          alt={iconName}
-          style={{
-            width: iconSize,
-            height: iconSize,
-            marginRight: children ? 6 : 0,
-          }}
-        />
-      )}
+    <div className="btn-icon" onClick={onClick}>
+      {iconName && <img src={getIconPath(iconName)} alt={iconName} />}
       {children && <span className="btn-text">{children}</span>}
-    </button>
+    </div>
   );
 };
 
-export default Button;
-
+export default Icon;
