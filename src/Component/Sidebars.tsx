@@ -1,6 +1,5 @@
 import React from "react";
-import "./Sidebar.scss"
-
+import "./Sidebar.scss";
 
 const Sidebar: React.FC = () => {
   return (
@@ -43,74 +42,97 @@ const Sidebar: React.FC = () => {
         aria-labelledby="sidebarExampleLabel"
         style={{ width: "270px", boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}
       >
-        
         <div className="offcanvas-body p-0">
           <ul className="list-unstyled m-0">
             <li className="sidebar-item">
-              <a href="#" className="sidebar-link">
-                <img
-                  src="/icons/key.svg"
-                  alt="จัดการมาสเตอร์"
-                  className="sidebar-icon"
-                />
-                จัดการมาสเตอร์
-                <i className="bi bi-chevron-down ms-auto"></i>
+              <a
+                href="#"
+                className="sidebar-link d-flex align-items-center justify-content-between"
+                data-bs-toggle="collapse"
+                data-bs-target="#masterMenu"
+              >
+                <div className="d-flex align-items-center">
+                  <img
+                    src="/icons/Vector12.svg"
+                    alt="จัดการมาสเตอร์"
+                    className="sidebar-icon me-2"
+                  />
+                  จัดการมาสเตอร์
+                </div>
+                <i className="bi bi-chevron-down"></i> {/* ลูกศรลง */}
               </a>
+
+              {/* เมนูย่อย */}
+              <ul id="masterMenu" className="collapse list-unstyled ps-4 mt-2">
+                <li>
+                  <a href="#" className="sidebar-sublink">
+                    จัดการบทบาทและสิทธิ์การใช้งาน
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="sidebar-sublink">
+                    จัดการจำนวนการรับงาน
+                  </a>
+                </li>
+              </ul>
             </li>
+
+            {/* เมนูหลักอื่น */}
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
                 <img
-                  src="/icons/doc.svg"
+                  src="/icons/Vector1.svg"
                   alt="สัญญาหลักประกัน"
                   className="sidebar-icon"
                 />
                 สัญญาหลักประกัน
               </a>
             </li>
+
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
                 <img
-                  src="/icons/check.svg"
+                  src="/icons/18.svg"
                   alt="ตรวจสอบสัญญา"
                   className="sidebar-icon"
                 />
                 ตรวจสอบสัญญาหลักประกัน
               </a>
             </li>
+
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
                 <img
-                  src="/icons/user.svg"
+                  src="/icons/20.svg"
                   alt="มอบหมายงาน"
                   className="sidebar-icon"
                 />
                 มอบหมายงาน
               </a>
             </li>
+
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
                 <img
-                  src="/icons/search.svg"
+                  src="/icons/Vector1.svg"
                   alt="ค้นหาสัญญา"
                   className="sidebar-icon"
                 />
                 ค้นหาสัญญาหลักประกัน
               </a>
             </li>
+
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
-                <img
-                  src="/icons/chart.svg"
-                  alt="รายงาน"
-                  className="sidebar-icon"
-                />
+                <img src="/icons/1.svg" alt="รายงาน" className="sidebar-icon" />
                 รายงานแดชบอร์ด
               </a>
             </li>
+
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
                 <img
-                  src="/icons/history.svg"
+                  src="/icons/19.svg"
                   alt="ประวัติ"
                   className="sidebar-icon"
                 />
