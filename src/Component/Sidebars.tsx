@@ -18,7 +18,7 @@ const Sidebar: React.FC = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <img
-            src="/icons/imges/baac-header-hover 1.png"
+            src="/imges/baac-header-hover 1.png"
             alt="BAAC Logo"
             style={{ height: "30px", width: "auto" }}
           />
