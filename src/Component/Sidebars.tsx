@@ -49,7 +49,7 @@ const Sidebar: React.FC = () => {
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
                 <img
-                  src="/icons/key.svg"
+                  src="/icons/Vector12.svg"
                   alt="จัดการมาสเตอร์"
                   className="sidebar-icon"
                 />
@@ -60,7 +60,7 @@ const Sidebar: React.FC = () => {
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
                 <img
-                  src="/icons/doc.svg"
+                  src="/icons/Vector1.svg"
                   alt="สัญญาหลักประกัน"
                   className="sidebar-icon"
                 />
@@ -70,7 +70,7 @@ const Sidebar: React.FC = () => {
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
                 <img
-                  src="/icons/check.svg"
+                  src="/icons/18.svg"
                   alt="ตรวจสอบสัญญา"
                   className="sidebar-icon"
                 />
@@ -80,7 +80,7 @@ const Sidebar: React.FC = () => {
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
                 <img
-                  src="/icons/user.svg"
+                  src="/icons/20.svg"
                   alt="มอบหมายงาน"
                   className="sidebar-icon"
                 />
@@ -90,7 +90,7 @@ const Sidebar: React.FC = () => {
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
                 <img
-                  src="/icons/search.svg"
+                  src="/icons/Vector1.svg"
                   alt="ค้นหาสัญญา"
                   className="sidebar-icon"
                 />
@@ -100,7 +100,7 @@ const Sidebar: React.FC = () => {
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
                 <img
-                  src="/icons/chart.svg"
+                  src="/icons/1.svg"
                   alt="รายงาน"
                   className="sidebar-icon"
                 />
@@ -110,7 +110,7 @@ const Sidebar: React.FC = () => {
             <li className="sidebar-item">
               <a href="#" className="sidebar-link">
                 <img
-                  src="/icons/history.svg"
+                  src="/icons/19.svg"
                   alt="ประวัติ"
                   className="sidebar-icon"
                 />
