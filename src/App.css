@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-weight: 700;                
+  font-style: normal;             
+  font-size: 24px;                   
+  line-height: 36px;                
+  letter-spacing: 0.25px;           
+}
+

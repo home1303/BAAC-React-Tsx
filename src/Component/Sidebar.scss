@@ -1,31 +1,71 @@
-.sidebar-item {
-  display: flex;
-  align-items: center;
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 56px; // navbar height
+  left: -270px; // เริ่มซ่อนไว้
+  width: 270px;
+  height: calc(100% - 56px);
+  background-color: #fff;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  transition: left 0.3s ease;
+  overflow-y: auto;
+  z-index: 1030;
+
+  .sidebar-item {
+    display: flex;
+    flex-direction: column;
+
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      padding: 12px 18px;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f5f5f5;
+        color: #006633;
+      }
+
+      .sidebar-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        opacity: 0.85;
+      }
+
+      i {
+        margin-left: auto;
+        font-size: 0.8rem;
+      }
+    }
+
+    .submenu {
+      padding-left: 30px;
+
+      .sidebar-link {
+        padding: 8px 18px;
+        font-weight: 400;
+        font-size: 0.9rem;
+      }
+    }
+  }
 }
 
-.sidebar-link {
-  display: flex;
-  align-items: center;
-  color: #333;
-  padding: 12px 18px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  font-weight: 500;
+.sidebar-open {
+  left: 0;
+}
 
-  &:hover {
-    background-color: #f5f5f5;
-    color: #006633; 
-  }
+/* Main Content */
+.main-content {
+  margin-top: 56px; // navbar
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
 
-  .sidebar-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    opacity: 0.85;
-  }
-
-  i {
-    margin-left: auto;
-    font-size: 0.8rem;
-  }
+.content-shift {
+  margin-left: 270px; // ดัน content
 }
