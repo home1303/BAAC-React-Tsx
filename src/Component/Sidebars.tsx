@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Sidebar.scss";
+import CardProfile from "./cardprofile";
 
 interface SidebarProps {
   open: boolean;
@@ -9,6 +10,8 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [submenuOpen, setSubmenuOpen] = useState(false);
+
+  const [showCard, setShowCard] = useState(false);
 
   const handleClick = (index: number) => {
     if (activeIndex === index) {
@@ -32,12 +35,40 @@ const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
           </button>
           <img src="/imges/baac-header-hover 1.png" alt="BAAC Logo" />
         </div>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <img
-            src="/icons/Container.svg"
-            alt="check"
-            style={{ width: 60, height: 70, marginRight: 8 }}
-          />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            position: "relative",
+          }}
+        >
+          <div
+            onClick={() => setShowCard(!showCard)}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              cursor: "pointer",
+            }}
+          >
+            <img
+              src="/icons/Container.svg"
+              alt="check"
+              style={{ width: 60, height: 70, marginRight: 8 }}
+            />
+          </div>
+
+          {showCard && (
+            <div
+              style={{
+                position: "absolute",
+                top: "70px",
+                right: 0,
+                zIndex: 1000,
+              }}
+            >
+              <CardProfile />
+            </div>
+          )}
         </div>
       </nav>
 
@@ -64,7 +95,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
             {submenuOpen && (
               <ul className="submenu list-unstyled">
                 <li className="sidebar-item">
-                  <a href="#" className="sidebar-link">
+                  <a href="/" className="sidebar-link">
                     รายการ 1
                   </a>
                 </li>
@@ -79,15 +110,24 @@ const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
 
           {/* Item อื่น ๆ */}
           {[
-            { icon: "/icons/Vector1.svg", label: "สัญญาหลักประกัน" },
-            { icon: "/icons/18.svg", label: "ตรวจสอบสัญญาหลักประกัน" },
-            { icon: "/icons/20.svg", label: "มอบหมายงาน" },
-            { icon: "/icons/Vector1.svg", label: "ค้นหาสัญญาหลักประกัน" },
-            { icon: "/icons/1.svg", label: "รายงานแดชบอร์ด" },
-            { icon: "/icons/19.svg", label: "ประวัติการใช้งาน" },
+            { icon: "/icons/Vector1.svg", label: "สัญญาหลักประกัน", href: "#" },
+            {
+              icon: "/icons/18.svg",
+              label: "ตรวจสอบสัญญาหลักประกัน",
+              href: "#",
+            },
+            { icon: "/icons/20.svg", label: "มอบหมายงาน", href: "#" },
+            {
+              icon: "/icons/Vector1.svg",
+              label: "ค้นหาสัญญาหลักประกัน",
+              href: "/SearchForm",
+            },
+            { icon: "/icons/1.svg", label: "รายงานแดชบอร์ด", href: "#" },
+            { icon: "/icons/19.svg", label: "ประวัติการใช้งาน", href: "#" },
           ].map((item, index) => (
             <li className="sidebar-item" key={index + 1}>
-              <div
+              <a
+                href={item.href} // ใช้ href สำหรับลิงก์
                 className={`sidebar-link ${
                   activeIndex === index + 1 ? "active" : ""
                 }`}
@@ -95,7 +135,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, setOpen }) => {
               >
                 <img src={item.icon} className="sidebar-icon" />
                 {item.label}
-              </div>
+              </a>
             </li>
           ))}
         </ul>
