@@ -150,7 +150,7 @@ const SearchForm: React.FC = () => {
         </div>
       </div>
 
-      <div className="mt-5 ms-5">
+      <div className="mt-5">
         <div className="cardItem">
           <CardItem
             title="จำนวนรายการทั้งหมด"

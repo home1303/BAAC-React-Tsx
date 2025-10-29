@@ -9,6 +9,8 @@
   height: 100%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 
+
+
   .card-left {
     display: flex;
     flex-direction: column;
@@ -42,19 +44,46 @@
   }
 }
 
+.card-blue h5,
+.card-blue h3 {
+  color: #2665a9;
+}
+.card-purple h5,
+.card-purple h3 {
+  color: #8892dd;
+}
+.card-green h5,
+.card-green h3 {
+  color: #7dc790;
+}
+.card-red h5,
+.card-red h3 {
+  color: #dd7b88;
+}
+.card-yellow h5,
+.card-yellow h3 {
+  color: #f7e49d;
+}
+.card-gray h5,
+.card-gray h3 {
+  color: #c5c9d3;
+}
 
-.card-blue h5, .card-blue h3 { color: #2665a9; }
-.card-purple h5, .card-purple h3 { color: #8892dd; }
-.card-green h5, .card-green h3 { color: #7dc790; }
-.card-red h5, .card-red h3 { color: #dd7b88; }
-.card-yellow h5, .card-yellow h3 { color: #f7e49d; }
-.card-gray h5, .card-gray h3 { color: #c5c9d3; }
-
-
-.bg-blue { background-color: #dee8f2; }
-.bg-purple { background-color: #edeef9; }
-.bg-green { background-color: #ebf7ee; }
-.bg-red { background-color:   #f9ebed; }
-.bg-yellow { background-color: #fefbef; }
-.bg-gray { background-color:  #f7f7f8; }
-
+.bg-blue {
+  background-color: #dee8f2;
+}
+.bg-purple {
+  background-color: #edeef9;
+}
+.bg-green {
+  background-color: #ebf7ee;
+}
+.bg-red {
+  background-color: #f9ebed;
+}
+.bg-yellow {
+  background-color: #fefbef;
+}
+.bg-gray {
+  background-color: #f7f7f8;
+}
