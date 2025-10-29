@@ -7,7 +7,7 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: none; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-transform: none;
   letter-spacing: 0.5px;
@@ -28,21 +28,19 @@
   overflow: hidden;
 }
 
-
 @each $name, $value in $colors {
   .btn-#{$name} {
     background-color: $value;
-    &:hover {
-      opacity: 0.9;
-      transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
+ 
+    &:hover,
     &:active {
-      transform: scale(0.95);
+      opacity: 1;
+      transform: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: $value;
     }
   }
 }
-
 
 @each $name, $value in $colors {
   .btn1-#{$name} {
@@ -50,14 +48,13 @@
     border-color: $value;
     color: $value;
 
-    &:hover {
-      background-color: $value;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-      transform: scale(1.05);
-    }
-
+ 
+    &:hover,
     &:active {
-      transform: scale(0.95);
+      background-color: transparent;
+      color: $value;
+      transform: none;
+      box-shadow: none;
     }
   }
 }

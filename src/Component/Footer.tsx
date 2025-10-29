@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
     <>
       <footer className="text-white pt-4">
         <div className="container-fluid px-5">
-          <div className="d-flex flex-wrap justify-content-between align-items-start footer-flex">
+          <div className="d-flex  justify-content-between align-items-start footer-flex">
             {/* โลโก้ */}
             <div className="text-center me-4">
               <img src="/imges/BAAC_Logo.svg 1.png" alt="BAAC Logo" />
