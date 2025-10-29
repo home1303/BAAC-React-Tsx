@@ -4,7 +4,6 @@ type IconProps = {
   iconName?: string;
   onClick?: () => void;
   children?: React.ReactNode;
-  iconSize?: number;
 };
 
 const getIconPath = (name: string) => `/icons/${name}.svg`;
